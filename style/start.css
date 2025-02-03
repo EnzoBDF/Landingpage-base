@@ -76,6 +76,7 @@ header{
     font: 900;
     font-size: 1.3rem;
     cursor: pointer;
+    transition: 0.5s;
 }
 
 .title-start button:hover{

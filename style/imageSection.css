@@ -42,6 +42,19 @@
         gap: 2rem;
     }
 
+    .text-section p{
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        text-align: center;
+    
+        
+    }
+
+    .text-section h3{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
     .image-section div {
         margin-right: 0;
     }
@@ -115,7 +128,7 @@
     margin-left: 7rem; /* Ajusta o espaço à à esquerda */
 }
 
-/ esquerda* Responsividade */
+
 @media (max-width: 1024px) {
     .image-section video {
         width: 60vw;
