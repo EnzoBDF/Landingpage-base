@@ -1,0 +1,143 @@
+.image-section{
+    height: 70vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-items: center;
+    margin-top: 5rem;
+}
+
+.image-section div{
+    
+    margin-right: 6rem;
+}
+
+.text-section h3{
+    font-size: 4rem;
+    color: #20BF55;
+
+}
+
+.text-section p{
+    font-size: 1.5rem;
+    color: #0B4F6C;
+}
+
+.image-section img{
+    width: 40vw;
+    height: 55vh;
+
+    box-shadow:  -20px -20px 0px #20BF55;
+    margin-left: 7rem;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .image-section {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .image-section div {
+        margin-right: 0;
+    }
+
+    .image-section img {
+        width: 60vw;
+        height: auto;
+        margin-left: 0;
+        box-shadow: -10px -10px 0px #20BF55;
+    }
+
+    .text-section h3 {
+        font-size: 3rem;
+    }
+
+    .text-section p {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-section img {
+        width: 70vw;
+        box-shadow: -5px -5px 0px #20BF55;
+    }
+
+    .text-section h3 {
+        font-size: 2.5rem;
+    }
+
+    .text-section p {
+        font-size: 1rem;
+    }
+
+    .image-section{
+        margin-top: 35rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-section {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .image-section img {
+        width: 80vw;
+        height: auto;
+        margin: 0 auto;
+        box-shadow: -5px -5px 0px #20BF55;
+    }
+
+    .text-section h3 {
+        font-size: 2rem;
+    }
+
+    .text-section p {
+        font-size: 0.9rem;
+    }
+
+    .image-section{
+        margin-top:43rem;
+    }
+}
+
+.image-section video {
+    width: 40vw;  /* Ajusta a largura do vídeo */
+    height: 55vh; /* Ajusta a altura do vídeo */
+    object-fit: cover; /* Faz com que o vídeo cubra a área definida sem distorcer */
+    box-shadow: -20px -20px 0px #20BF55; /* Adiciona um efeito de sombra */
+    margin-left: 7rem; /* Ajusta o espaço à à esquerda */
+}
+
+/ esquerda* Responsividade */
+@media (max-width: 1024px) {
+    .image-section video {
+        width: 60vw;
+        height: auto;
+        margin-left: 0;
+        box-shadow: -10px -10px 0px #20BF55;
+    }
+}
+
+@media (max-width: 768px) {
+    .image-section video {
+        width: 70vw;
+        height: auto;
+        box-shadow: -5px -5px 0px #20BF55;
+    }
+}
+
+@media (max-width: 480px) {
+    .image-section video {
+        width: 80vw;
+        height: auto;
+        margin: 0 auto;
+        box-shadow: -5px -5px 0px #20BF55;
+    }
+}

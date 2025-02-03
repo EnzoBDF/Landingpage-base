@@ -1,0 +1,209 @@
+.people{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+}
+
+.people2{
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 7rem;
+    margin-bottom: 8rem;
+}
+
+.people-circle{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: #333;
+    border-radius: 100%;
+    width: 10rem;
+    height: 10rem;
+}
+
+.people-circle span{
+    font-weight: 900;
+    color: azure;
+    font-size: 3rem;
+}
+
+
+.people-show{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+
+.people-show p{
+    margin-top: 4rem;
+}
+
+.people-show h1{
+    margin-bottom: 3rem;
+}
+
+
+.team-picture{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+  
+    
+}
+
+.people-picture{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 0 6rem 6rem;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    box-shadow: #3333335b 0px 20px 5px;
+    margin-left: 0rem;
+    margin: 1rem;
+}
+
+.people-picture img{
+    width: 22rem;
+    height: 17rem;
+}
+
+.people-picture h3{
+    font-size: 1.5rem;
+    color: #20BF55;
+}
+
+.picture-info{
+    width: 22rem;
+    background-color: #333;
+    border-bottom-right-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+}
+
+.picture-info p{
+    color: azure;
+    margin-left: 0;
+}
+
+.pulse {
+    animation: pulse-animation 1.5s infinite;
+  }
+
+@keyframes pulse-animation {
+    0% {
+      box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      box-shadow: 0 0 0 20px #20bf5570;
+    }
+    100%{
+        box-shadow: 0 0 0 0px #20BF55;
+    }
+  }
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+
+    .people{
+        margin-bottom: 10rem;
+        margin-top: 10rem;
+    }
+
+    .people2{
+        margin-top: 30rem;
+    }
+
+    .team-picture {
+        gap: 1rem;
+    }
+
+    .people-picture {
+        max-width: 90%;
+    }
+
+    .picture-info h3 {
+        font-size: 1.25rem;
+    }
+
+    .picture-info p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+    .team-picture {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .people-picture {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .picture-info h3 {
+        font-size: 1.1rem;
+    }
+
+    .picture-info p {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .people-show h1 {
+        font-size: 2rem; /* Reduzir tamanho da fonte */
+        text-align: center;
+    }
+
+    .people-show p {
+        font-size: 1rem; /* Reduzir tamanho da fonte */
+    }
+
+    .people-circle {
+        width: 8rem; /* Reduzir tamanho do círculo */
+        height: 8rem;
+    }
+
+    .people-circle span {
+        font-size: 2.5rem; /* Reduzir tamanho da fonte */
+    }
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 480px) {
+    .people-show h1 {
+        font-size: 1.8rem; /* Reduzir tamanho da fonte */
+    }
+
+    .people-show p {
+        font-size: 0.9rem; /* Reduzir tamanho da fonte */
+        max-width: 90%; /* Aumentar largura do texto */
+    }
+
+    .people-circle {
+        width: 6rem; /* Reduzir tamanho do círculo */
+        height: 6rem;
+    }
+
+    .people-circle span {
+        font-size: 2rem; /* Reduzir tamanho da fonte */
+    }
+}

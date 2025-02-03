@@ -1,0 +1,122 @@
+* {
+  box-sizing: border-box; /* Garante que padding e border não afetem a largura */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;  /* Impede a rolagem horizontal */
+  overflow-y: auto;    /* Permite rolagem vertical */
+  margin: 0;
+  font-family: "Poppins";
+  width: 100%; /* Garante que o body ocupe 100% da largura da tela */
+  height: 100%; /* Garante que o body ocupe 100% da altura da tela */
+  position: relative;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100vw;
+    height: 5rem;
+    box-shadow: 0px 10px 10px #3333334f;
+    position: fixed;
+    background-color: azure;
+    color: #20BF55;
+}
+
+.start{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+    justify-items: center;
+    background-image: url('https://img.freepik.com/fotos-gratis/closeup-tiro-de-uma-bolha-colorida-na-agua_181624-20995.jpg?t=st=1738345423~exp=1738349023~hmac=7a9f7a1beb01f72aba7f61d81a3f837c9e46ef67170eb67e856d958a0ef7ccf5&w=1380');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+   
+}
+
+.title-start{
+    display: flex;
+    flex-direction: column;
+    width: 40vw;
+    margin-left: 2rem;
+    text-align: center;
+    margin-bottom: 4rem;
+    filter: none;
+    justify-items: center;
+    align-items: center;
+}
+.title-start h1{
+    font-size: 5rem;
+    color: #20BF55;
+    margin-bottom: -1.5rem;
+}
+.title-start p{
+    font-size: 1.5rem;
+    color: azure;
+}
+
+.title-start button{
+    width: 15rem;
+    height: 4rem;
+    border-radius: 0.3rem;
+    border: none;
+    background-color: #20BF55;
+    color: aliceblue;
+    font: 900;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.title-start button:hover{
+    background-color: #0c4e22;
+}
+
+
+@media (max-width: 768px) {
+    .title-start {
+      width: 80vw;
+      margin-left: 0;
+    }
+  
+    .title-start h1 {
+      font-size: 3rem;
+    }
+  
+    .title-start p {
+      font-size: 1rem;
+      margin-left: 0;
+    }
+  
+    .title-start button {
+      width: 12rem;
+      height: 3.5rem;
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .title-start h1 {
+      font-size: 2.5rem;
+    }
+  
+    .title-start p {
+      font-size: 0.9rem;
+    }
+  
+    .title-start button {
+      width: 10rem;
+      height: 3rem;
+      font-size: 0.9rem;
+    }
+  }

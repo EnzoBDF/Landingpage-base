@@ -1,0 +1,175 @@
+.vantagens{
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    background-color: #333;
+}
+
+.grid-vantagens{
+  margin-top: 5rem;
+    width: 80vw;
+    height: auto;
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    align-items: center;
+    justify-items: center;
+}
+
+.card-vantagens{
+    width: 80%;
+    height: 80%;
+    background-color: aliceblue;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 0.3rem;
+    background: rgba(255, 255, 255, 0.10);
+
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.8px);
+    -webkit-backdrop-filter: blur(5.8px);
+    border: 1px solid rgba(255, 255, 255, 0.164);
+    transition: 0.2s;
+}
+
+
+.card-vantagens:hover{
+    background: rgba(255, 255, 255, 0.40);
+}
+
+
+
+.texto-vantagens{
+    width: 80%;
+    height: 100%;
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.texto-vantagens h3{
+    color: #20BF55;
+}
+
+.card-vantagens i{
+    color: #20BF55;
+    font-size: 2rem;
+    margin-left: 1rem;
+    margin-bottom: -1.5rem;
+}
+
+.texto-vantagens p{
+    color: azure;
+}
+
+.vantagens h1{
+    color: #20BF55;
+    font-size: 3rem;
+    margin-bottom: -2rem;
+    text-align: center;
+}
+
+.card-vantagens h3,p{
+    margin-left: 1rem;
+}
+
+.card-vantagens p{
+    color: azure;
+}
+
+.card-vantagens h3{
+    color: #20BF55;
+    margin-bottom: -1rem;
+}
+
+.text{
+    margin-left: 0;
+}
+
+
+@media (max-width: 1024px) {
+    .grid-vantagens {
+        grid-template-columns: repeat(2, 1fr);
+        width: 100vw;
+        margin-top: 1rem;
+    }
+
+    .texto-vantagens h3 {
+        font-size: 1.8rem;
+    }
+
+    .texto-vantagens p {
+        font-size: 1rem;
+    }
+
+    .card-vantagens{
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .grid-vantagens {
+        grid-template-columns: 1fr;
+        grid-gap: 1.5rem;
+    }
+
+    .vantagens{
+        margin-top: 10rem;
+    }
+
+    .texto-vantagens h3 {
+        font-size: 1.5rem;
+    }
+
+    .texto-vantagens{
+        text-align: center;
+    }
+
+    .texto-vantagens p {
+        font-size: 0.9rem;
+    }
+
+    .card-vantagens h3 {
+        font-size: 1.1rem;
+    }
+
+    .card-vantagens p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .vantagens h1 {
+        font-size: 2rem;
+    }
+
+    .texto-vantagens{
+        text-align: center;
+    }
+
+    .texto-vantagens h3 {
+        font-size: 1.2rem;
+    }
+
+    .texto-vantagens p {
+        font-size: 0.8rem;
+    }
+
+    .card-vantagens h3 {
+        font-size: 1rem;
+    }
+
+    .card-vantagens p {
+        font-size: 0.8rem;
+    }
+}

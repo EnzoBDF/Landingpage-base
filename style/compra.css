@@ -1,0 +1,188 @@
+.pagamento{
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: auto;
+    align-items: center;
+    background-color: #333;
+    color: azure;
+    padding: 1rem;
+
+}
+
+.title-pagamento{
+    width: 40vw;
+    margin-left: 20rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+
+.card-pagamento{
+    padding: 3rem;
+    align-items: center;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.10);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.8px);
+    -webkit-backdrop-filter: blur(5.8px);
+    border: 1px solid rgba(255, 255, 255, 0.164);
+    color: azure;
+}
+
+.card-pagamento button{
+    padding: 1rem;
+    background-color: #20BF55;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: azure;
+    cursor: pointer;
+}
+
+.pagamento-card-holder{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+    width: 50vw;
+    margin-right: 15rem;
+}
+
+.title-pagamento h2{
+    color: #20BF55;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+.title-pagamento h3{
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-top: -1rem;
+    letter-spacing: 1px;
+}
+
+.pagamento-texto h1{
+    margin-bottom: -1rem;
+}
+
+.pagamento-texto span{
+    font-size: 4rem;
+    font-weight: 900;
+    color: #20BF55;
+}
+
+.pagamento-texto h1{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.pagamento-texto h2{
+    margin-bottom: 1.5rem;
+}
+
+.pagamento-texto{
+    font-weight: lighter;
+}
+
+
+@media (max-width: 768px) {
+    .pagamento {
+        flex-direction: column; /* Coluna para mobile */
+        height: auto;
+        padding: 1rem; /* Reduzir padding */
+        margin-top: 25rem;
+    }
+
+    .title-pagamento {
+        width: 90%; /* Ocupa quase toda a largura */
+        margin-left: 0; /* Remove margem */
+        text-align: center; /* Centraliza o texto */
+        margin-bottom: 2rem; /* Espaçamento abaixo do título */
+    }
+
+    .title-pagamento h2 {
+        font-size: 2rem; /* Reduz o tamanho da fonte */
+        margin-bottom: 1.5rem;
+    }
+
+    .title-pagamento h3 {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    }
+
+    .pagamento-card-holder {
+        width: 90%; /* Ocupa quase toda a largura */
+        margin-right: 0; /* Remove margem */
+    }
+
+    .card-pagamento {
+        padding: 1.5rem; /* Reduz o padding */
+    }
+
+    .pagamento-texto h1 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte */
+    }
+
+    .pagamento-texto h2 {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    }
+
+    .pagamento-texto span {
+        font-size: 3rem; /* Reduz o tamanho da fonte */
+    }
+
+    .card-pagamento button {
+        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+    }
+}
+
+/* Media queries para telas menores que 480px */
+@media (max-width: 480px) {
+    .pagamento {
+        padding: 1rem 0.5rem; /* Reduzir ainda mais o padding */
+    }
+
+    .title-pagamento {
+        width: 100%; /* Ocupa toda a largura */
+        margin-bottom: 1.5rem; /* Espaçamento menor abaixo do título */
+    }
+
+    .title-pagamento h2 {
+        font-size: 1.8rem; /* Reduzir o tamanho da fonte */
+        margin-bottom: 1rem;
+    }
+
+    .title-pagamento h3 {
+        font-size: 1rem; /* Reduzir o tamanho da fonte */
+        letter-spacing: 0.5px; /* Ajustar espaçamento entre letras */
+    }
+
+    .pagamento-card-holder {
+        width: 100%; /* Ocupa toda a largura */
+    }
+
+    .card-pagamento {
+        padding: 1rem; /* Reduzir o padding */
+    }
+
+    .pagamento-texto h1 {
+        font-size: 1.3rem; /* Reduzir o tamanho da fonte */
+        margin-bottom: 0.5rem;
+    }
+
+    .pagamento-texto h2 {
+        font-size: 1rem; /* Reduzir o tamanho da fonte */
+        margin-bottom: 1rem;
+    }
+
+    .pagamento-texto span {
+        font-size: 2.5rem; /* Reduzir o tamanho da fonte */
+    }
+
+    .card-pagamento button {
+        font-size: 1rem; /* Reduzir o tamanho da fonte */
+        padding: 0.8rem; /* Reduzir o padding */
+    }
+}
