@@ -116,6 +116,83 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const pagamentoSection = document.querySelector(".pagamento");
+
+    const observerOptions = {
+        root: null, // Usa o viewport como referência
+        rootMargin: "0px",
+        threshold: 0.2 // Gatilho quando 20% da seção estiver visível
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                pagamentoSection.classList.add("in-view");
+                observer.unobserve(pagamentoSection); // Para observar apenas uma vez
+            }
+        });
+    }, observerOptions);
+
+    observer.observe(pagamentoSection);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const elementsToAnimate = document.querySelectorAll(".ebook-section img, .ebook-text, .ebook-button");
+
+    // Configurar Intersection Observer
+    const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("animate"); // Adiciona a classe de animação
+                observer.unobserve(entry.target); // Para de observar após a animação
+            }
+        });
+    });
+
+    // Observar todos os elementos que precisam de animação
+    elementsToAnimate.forEach((el) => observer.observe(el));
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const targetCircle = document.querySelector(".people-circle");
+    const targetText = document.querySelector(".people-show p");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target); // Para de observar após a animação
+                }
+            });
+        },
+        { threshold: 0.5 } // Gatilho quando 50% do elemento estiver visível
+    );
+
+    observer.observe(targetCircle);
+    observer.observe(targetText);
+});
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const targetH1 = document.querySelector(".depoimento-text h1");
+
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                    observer.unobserve(entry.target); // Para de observar após a animação
+                }
+            });
+        },
+        { threshold: 0.5 } // Gatilho quando 50% do elemento estiver visível
+    );
+
+    observer.observe(targetH1);
+});
+
 /* document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".carousel-vantagens-track");
     const cards = document.querySelectorAll(".carousel-vantagens-item");

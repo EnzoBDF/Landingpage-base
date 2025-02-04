@@ -10,6 +10,14 @@
     justify-content: space-between;
     gap: 2rem;
     overflow: hidden; /* Evita rolagens indesejadas */
+    opacity: 0;
+    transform: translateY(50px); /* Posição inicial para animação */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.pagamento.in-view {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .title-pagamento {

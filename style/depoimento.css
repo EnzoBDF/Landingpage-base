@@ -15,11 +15,22 @@
     margin-left: 5rem;
 }
 
+.depoimento-text h1{
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease-out;
+}
+
+.depoimento-text h1.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .depoimento img{
     width: 40vw;
     height: 55vh;
 
-    box-shadow:  -20px -20px 0px #20BF55;
+/*     filter: drop-shadow(-40px -40px 0px #20bf55); */
     margin-left: 15rem;
 }
 
@@ -40,6 +51,7 @@
     .depoimento img {
         width: 80%;
         margin: 0 auto;
+        height: auto;
     }
 
     .depoimento-text h1 {
