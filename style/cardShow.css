@@ -1,93 +1,185 @@
-.card-show{
-    height: 50vh;
-    width: 100vw;
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    margin-top: 7rem;
+.card-show-carousel {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    padding: 2rem 0; /* Ajusta o espaçamento superior e inferior */
+    box-sizing: border-box; /* Garante que padding e borda sejam incluídos no tamanho total */
+    margin: 0 auto; /* Centraliza o container do carrossel */
+    position: relative;
 }
 
-.card{
+
+.carousel-container {
+    width: 100%;
+    max-width: 100%; /* Define um limite de largura */
+    position: relative;
     display: flex;
-    flex-direction: column;
-    width: 25rem;
-    height: 20rem;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Impede transbordamentos laterais */
+    box-sizing: border-box;
+}
+
+.carousel-track {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Card geral */
+.card {
+    flex-shrink: 0;
+    width: 22rem;
+    min-height: 18rem;
     box-shadow: 0px 10px 10px #3333334f;
     border-radius: 1rem;
-    align-items: center;
-    justify-items: center;
-}
-
-.card-text{
     display: flex;
     flex-direction: column;
     align-items: center;
-    align-content: center;
-    justify-items: center;
     justify-content: center;
-    text-align: left;
-    margin-top: 2.5rem;
+    padding: 1rem;
+    margin: 1rem; /* Adiciona espaçamento ao redor dos cards */
+    box-sizing: border-box;
+    background-color: #fff;
+    margin-right: 0;
+    opacity: 0; /* Inicialmente invisível */
+    transform: translateY(20px); /* Começa ligeiramente deslocado */
+    transition: all 0.5s ease-out;
+}
+
+.card.visible {
+    animation: fadeInUp 1s ease-out forwards; /* Aparece com animação */
+}
+
+.card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .card-text p{
-    margin-top: -0.5rem;
+    margin-left: 0;
 }
 
-.card-text i{
+.card-text i {
     color: #20BF55;
     font-size: 3rem;
-    margin-bottom: -2rem;
+    margin-bottom: 1rem;
 }
 
-@media (max-width: 1024px) {
-    .card-show {
-        grid-template-columns: repeat(3, 1fr);
+/* Botões de navegação */
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    opacity: 40%;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+}
+.carousel-control.prev {
+    left: 1rem;
+}
+
+.carousel-control.next {
+    right: 1rem;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem; /* Espaçamento entre os indicadores e os cards */
+    gap: 0.5rem;
+    position: absolute; /* Torna os indicadores posicionados abaixo do carrossel */
+    bottom: 1rem; /* Ajusta a posição vertical */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translateX(-50%); /* Corrige o alinhamento horizontal */
+    z-index: 5; /* Certifica-se de que os indicadores estejam acima de outros elementos */
+ 
+}
+
+.carousel-indicators .indicator {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.carousel-indicators .indicator.active {
+    background-color: #20BF55; /* Cor do indicador ativo */
+}
+
+/* Ajusta o layout para Desktop */
+@media (min-width: 1024px) {
+    .carousel-track {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); /* 4 cards por linha */
+        padding: 0 2rem;
+        gap: 2rem; /* Espaçamento horizontal e vertical entre os cards */
+    }
+    .carousel-control {
+        display: none; /* Esconder botões no desktop */
+    }
+
+    .carousel-indicators{
+        display: none;
+    }
+}
+
+/* Ajusta para Tablet - 2 cards por vez */
+@media (max-width: 1023px) {
+    .carousel-track {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* 2 cards por linha */
+        gap: 1.5rem; /* Ajuste do espaçamento */
     }
 
     .card {
-        width: 22rem;
-        height: 18rem;
+        width: 45%;
     }
 }
 
+/* Ajusta para Mobile - 1 card por vez */
 @media (max-width: 768px) {
-    .card-show {
-        grid-template-columns: repeat(2, 1fr);
+    .carousel-container {
+        overflow: hidden; /* Impede transbordamento */
+    }
+
+    .carousel-track {
+        display: flex;
+        gap: 0; /* Remove o gap para o carrossel mobile */
+        width: 100%;
     }
 
     .card {
-        width: 20rem;
-        height: 16rem;
+        min-width: 100%;
+        max-width: 100%;
+        margin: 0 auto; /* Centraliza o card dentro do track */
+        border-radius: 0;
     }
 
-    .card-text i {
-        font-size: 2.5rem;
-    }
-
-    .card-text p {
-        font-size: 0.9rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .card-show {
-        grid-template-columns: 1fr;
-    }
-
-    .card {
-        width: 90%;
-        height: auto;
-        padding: 1rem;
-    }
-
-    .card-text i {
-        font-size: 2rem;
-    }
-
-    .card-text p {
-        font-size: 0.8rem;
+    .carousel-control {
+        display: flex;
     }
 }

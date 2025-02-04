@@ -1,188 +1,209 @@
-.pagamento{
+.pagamento {
     display: flex;
     flex-direction: row;
     width: 100vw;
     height: auto;
     align-items: center;
-    background-color: #333;
+    background-color: #1E1E1E; /* Fundo escuro elegante */
     color: azure;
-    padding: 1rem;
-
+    padding: 3rem 5rem;
+    justify-content: space-between;
+    gap: 2rem;
+    overflow: hidden; /* Evita rolagens indesejadas */
 }
 
-.title-pagamento{
-    width: 40vw;
-    margin-left: 20rem;
+.title-pagamento {
+    flex: 1;
+    max-width: 50%;
     display: flex;
     justify-content: center;
     flex-direction: column;
     text-align: left;
+    animation: fadeInLeft 1s ease-in-out; /* Animação de entrada */
 }
 
-
-.card-pagamento{
-    padding: 3rem;
-    align-items: center;
-    text-align: center;
-    background: rgba(255, 255, 255, 0.10);
-    border-radius: 1rem;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(5.8px);
-    -webkit-backdrop-filter: blur(5.8px);
-    border: 1px solid rgba(255, 255, 255, 0.164);
-    color: azure;
-}
-
-.card-pagamento button{
-    padding: 1rem;
-    background-color: #20BF55;
-    font-size: 1.5rem;
-    border: none;
-    border-radius: 0.5rem;
-    color: azure;
-    cursor: pointer;
-}
-
-.pagamento-card-holder{
-    display: flex;
-    align-items: center;
-    justify-items: center;
-    justify-content: center;
-    width: 50vw;
-    margin-right: 15rem;
-}
-
-.title-pagamento h2{
+.title-pagamento h2 {
     color: #20BF55;
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: bounceIn 1.5s ease-in-out; /* Título principal salta */
 }
-.title-pagamento h3{
+
+.title-pagamento h3 {
     font-size: 1.4rem;
     font-weight: 300;
     margin-top: -1rem;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+    opacity: 0;
+    animation: fadeIn 1.2s ease-in-out forwards; /* Suave entrada */
+    animation-delay: 0.5s;
 }
 
-.pagamento-texto h1{
-    margin-bottom: -1rem;
+.pagamento-card-holder {
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: fadeInRight 1s ease-in-out; /* Entrada pelo lado direito */
 }
 
-.pagamento-texto span{
+.card-pagamento {
+    padding: 2rem;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(145deg, rgba(32, 191, 85, 0.2), rgba(32, 191, 85, 0.1));
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: azure;
+    width: 100%;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.card-pagamento:hover {
+    transform: scale(1.05); /* Efeito de zoom */
+    box-shadow: 0 12px 40px rgba(0, 255, 100, 0.4);
+}
+
+.card-pagamento button {
+    padding: 1rem 2rem;
+    background-color: #20BF55;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    cursor: pointer;
+    animation: pulse 1.5s infinite; /* Pulso contínuo */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.card-pagamento button:hover {
+    background-color: #1AA94D;
+    transform: translateY(-2px); /* Elevação */
+}
+
+.pagamento-texto h1 {
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    color: #FFF;
+}
+
+.pagamento-texto h2 {
+    margin-bottom: 1.5rem;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    position: relative;
+}
+
+.pagamento-texto span {
     font-size: 4rem;
     font-weight: 900;
     color: #20BF55;
+    animation: glow 2s infinite alternate; /* Brilho animado */
 }
 
-.pagamento-texto h1{
-    margin-bottom: 1rem;
-    font-size: 2rem;
+/* Animações */
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.pagamento-texto h2{
-    margin-bottom: 1.5rem;
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
-.pagamento-texto{
-    font-weight: lighter;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
+@keyframes bounceIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
 
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 10px rgba(32, 191, 85, 0.8), 0 0 20px rgba(32, 191, 85, 0.6);
+    }
+    to {
+        text-shadow: 0 0 20px rgba(32, 191, 85, 1), 0 0 30px rgba(32, 191, 85, 0.8);
+    }
+}
+
+/* Responsividade */
 @media (max-width: 768px) {
     .pagamento {
-        flex-direction: column; /* Coluna para mobile */
-        height: auto;
-        padding: 1rem; /* Reduzir padding */
+        flex-direction: column;
+        padding: 2rem 1rem;
+        gap: 2rem;
         margin-top: 25rem;
     }
 
     .title-pagamento {
-        width: 90%; /* Ocupa quase toda a largura */
-        margin-left: 0; /* Remove margem */
-        text-align: center; /* Centraliza o texto */
-        margin-bottom: 2rem; /* Espaçamento abaixo do título */
-    }
-
-    .title-pagamento h2 {
-        font-size: 2rem; /* Reduz o tamanho da fonte */
-        margin-bottom: 1.5rem;
-    }
-
-    .title-pagamento h3 {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+        max-width: 100%;
+        text-align: center;
     }
 
     .pagamento-card-holder {
-        width: 90%; /* Ocupa quase toda a largura */
-        margin-right: 0; /* Remove margem */
-    }
-
-    .card-pagamento {
-        padding: 1.5rem; /* Reduz o padding */
-    }
-
-    .pagamento-texto h1 {
-        font-size: 1.5rem; /* Reduz o tamanho da fonte */
-    }
-
-    .pagamento-texto h2 {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
-    }
-
-    .pagamento-texto span {
-        font-size: 3rem; /* Reduz o tamanho da fonte */
-    }
-
-    .card-pagamento button {
-        font-size: 1.2rem; /* Reduz o tamanho da fonte */
+        max-width: 100%;
     }
 }
 
-/* Media queries para telas menores que 480px */
 @media (max-width: 480px) {
-    .pagamento {
-        padding: 1rem 0.5rem; /* Reduzir ainda mais o padding */
-    }
-
-    .title-pagamento {
-        width: 100%; /* Ocupa toda a largura */
-        margin-bottom: 1.5rem; /* Espaçamento menor abaixo do título */
-    }
-
     .title-pagamento h2 {
-        font-size: 1.8rem; /* Reduzir o tamanho da fonte */
-        margin-bottom: 1rem;
+        font-size: 2.2rem;
     }
 
     .title-pagamento h3 {
-        font-size: 1rem; /* Reduzir o tamanho da fonte */
-        letter-spacing: 0.5px; /* Ajustar espaçamento entre letras */
-    }
-
-    .pagamento-card-holder {
-        width: 100%; /* Ocupa toda a largura */
-    }
-
-    .card-pagamento {
-        padding: 1rem; /* Reduzir o padding */
-    }
-
-    .pagamento-texto h1 {
-        font-size: 1.3rem; /* Reduzir o tamanho da fonte */
-        margin-bottom: 0.5rem;
-    }
-
-    .pagamento-texto h2 {
-        font-size: 1rem; /* Reduzir o tamanho da fonte */
-        margin-bottom: 1rem;
-    }
-
-    .pagamento-texto span {
-        font-size: 2.5rem; /* Reduzir o tamanho da fonte */
+        font-size: 1.2rem;
     }
 
     .card-pagamento button {
-        font-size: 1rem; /* Reduzir o tamanho da fonte */
-        padding: 0.8rem; /* Reduzir o padding */
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
     }
 }

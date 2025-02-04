@@ -6,7 +6,7 @@
     grid-template-rows: 1fr;
     align-items: center;
     justify-items: center;
-    margin-top: 5rem;
+    margin-top: 1rem;
 }
 
 .image-section div{
@@ -116,7 +116,8 @@
     }
 
     .image-section{
-        margin-top:43rem;
+        margin-top:4rem;
+        margin-bottom: 3rem;
     }
 }
 

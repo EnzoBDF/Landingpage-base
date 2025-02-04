@@ -48,6 +48,8 @@
 
     .depoimento-text p {
         font-size: 0.9rem;
+        margin-left: 0;
+        text-align: left;
     }
 }
 
