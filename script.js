@@ -193,6 +193,55 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(targetH1);
 });
 
+
+document.addEventListener("DOMContentLoaded", () => {
+    const faqQuestions = document.querySelectorAll(".faq-question");
+
+    faqQuestions.forEach((question) => {
+        question.addEventListener("click", () => {
+            const expanded = question.getAttribute("aria-expanded") === "true";
+            question.setAttribute("aria-expanded", !expanded);
+
+            const answer = question.nextElementSibling;
+            if (!expanded) {
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            } else {
+                answer.style.maxHeight = "0px";
+            }
+        });
+    });
+});
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const faqSection = document.querySelector(".faq-section");
+    const faqItems = document.querySelectorAll(".faq-item");
+  
+    // Função para verificar se o elemento está visível na viewport
+    const isInViewport = (element) => {
+      const rect = element.getBoundingClientRect();
+      return rect.top <= window.innerHeight && rect.bottom >= 0;
+    };
+  
+    // Função para animar a seção FAQ quando entrar na viewport
+    const animateFaqSection = () => {
+      if (isInViewport(faqSection) && !faqSection.classList.contains("fade-in")) {
+        faqSection.classList.add("fade-in"); // Anima a seção principal
+        faqItems.forEach((item, index) => {
+          setTimeout(() => {
+            item.classList.add("fade-in"); // Anima cada item com atraso
+          }, index * 400); // Incremento de atraso (150ms por item)
+        });
+      }
+    };
+  
+    // Chamar animação no carregamento e no scroll
+    window.addEventListener("scroll", animateFaqSection);
+    animateFaqSection(); // Garante a animação inicial caso já esteja na viewport
+  });
+  
+  
 /* document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".carousel-vantagens-track");
     const cards = document.querySelectorAll(".carousel-vantagens-item");
