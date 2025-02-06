@@ -248,6 +248,10 @@ function scrollToPurchase() {
     }
 }
 
+function scrollToEbook() {
+    const ebookSection = document.getElementById("ebook-section");
+    ebookSection.scrollIntoView({ behavior: "smooth" }); // Rola suavemente até a seção
+}
 
 
 /* document.addEventListener("DOMContentLoaded", function () {
