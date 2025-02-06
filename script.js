@@ -247,6 +247,9 @@ function scrollToPurchase() {
         purchaseSection.scrollIntoView({ behavior: "smooth" });
     }
 }
+
+
+
 /* document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".carousel-vantagens-track");
     const cards = document.querySelectorAll(".carousel-vantagens-item");
