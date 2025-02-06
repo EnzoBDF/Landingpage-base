@@ -1,6 +1,6 @@
 .depoimento{
     width: 100vw;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -13,6 +13,10 @@
     width: 30vw;
     text-align: left;
     margin-left: 5rem;
+}
+
+.depoimento-text button{
+    margin-left: 11rem;
 }
 
 .depoimento-text h1{
@@ -32,6 +36,33 @@
 
 /*     filter: drop-shadow(-40px -40px 0px #20bf55); */
     margin-left: 15rem;
+}
+
+@media (max-width:1024px){
+    .depoimento{
+        flex-direction: column ;
+    }
+
+    .depoimento-text{
+        width: auto;
+        margin-left: 4rem;
+        margin-right: 4rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .depoimento-text button{
+        margin-top: 4rem;
+        margin-left: 0;
+    }
+
+    .depoimento img{
+        width: 60rem;
+        height: 30rem;
+        margin: 0;
+    }
+
 }
 
 

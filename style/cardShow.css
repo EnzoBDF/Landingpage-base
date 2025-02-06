@@ -7,6 +7,7 @@
     box-sizing: border-box; /* Garante que padding e borda sejam incluídos no tamanho total */
     margin: 0 auto; /* Centraliza o container do carrossel */
     position: relative;
+    margin-top: 3rem;
 }
 
 
@@ -131,7 +132,7 @@
 }
 
 /* Ajusta o layout para Desktop */
-@media (min-width: 1024px) {
+@media (min-width: 1025px) {
     .carousel-track {
         display: grid;
         grid-template-columns: repeat(4, 1fr); /* 4 cards por linha */
@@ -147,6 +148,25 @@
     }
 }
 
+@media (max-width:1024px){
+    .carousel-track{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 4rem;
+    }
+
+    .carousel-indicators,
+    .carousel-control{
+        display: none   ;
+    }
+
+
+
+
+}
+
+
 /* Ajusta para Tablet - 2 cards por vez */
 @media (max-width: 1023px) {
     .carousel-track {
@@ -156,7 +176,7 @@
     }
 
     .card {
-        width: 45%;
+        width: 90%;
     }
 }
 

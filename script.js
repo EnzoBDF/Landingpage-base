@@ -241,7 +241,12 @@ document.addEventListener("DOMContentLoaded", () => {
     animateFaqSection(); // Garante a animação inicial caso já esteja na viewport
   });
   
-  
+function scrollToPurchase() {
+    const purchaseSection = document.getElementById("purchase-section");
+    if (purchaseSection) {
+        purchaseSection.scrollIntoView({ behavior: "smooth" });
+    }
+}
 /* document.addEventListener("DOMContentLoaded", function () {
     const track = document.querySelector(".carousel-vantagens-track");
     const cards = document.querySelectorAll(".carousel-vantagens-item");

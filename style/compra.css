@@ -37,6 +37,28 @@
     animation: bounceIn 1.5s ease-in-out; /* Título principal salta */
 }
 
+.title-pagamento ul {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    list-style-type: disc; /* Formato de lista */
+    padding-left: 1.5rem; /* Recuo */
+    color: #fff;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+}
+
+.title-pagamento ul li {
+    margin-bottom: 0.5rem; /* Espaçamento entre os itens */
+}
+
+.title-pagamento del {
+    color: #ff7373; /* Cor para o texto riscado */
+}
+
+
 .title-pagamento h3 {
     font-size: 1.4rem;
     font-weight: 300;
@@ -188,7 +210,7 @@
         flex-direction: column;
         padding: 2rem 1rem;
         gap: 2rem;
-        margin-top: 25rem;
+        margin-top: 2rem;
     }
 
     .title-pagamento {
@@ -204,6 +226,10 @@
 @media (max-width: 480px) {
     .title-pagamento h2 {
         font-size: 2.2rem;
+    }
+
+    .pagamento{
+        margin-top: 5rem;
     }
 
     .title-pagamento h3 {

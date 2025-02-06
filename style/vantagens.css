@@ -171,6 +171,11 @@
 }
 
 @media (max-width: 480px) {
+
+    .vantagens{
+        margin-top: 0;
+    }
+
     .vantagens h1 {
         font-size: 2rem;
     }

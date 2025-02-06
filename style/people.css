@@ -11,7 +11,7 @@
 }
 
 .people2{
-    height: 50vh;
+    height: auto;
     width: 100vw;
     display: flex;
     flex-direction: column;
@@ -180,7 +180,20 @@
     animation: fadeInUp 0.6s ease-out forwards;
 }
 
+@media (max-width: 1024px) {
+    .team-picture {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Duas colunas */
+        grid-template-rows: auto auto; /* Ajuste automático para o conteúdo */
+        gap: 2rem; /* Espaçamento entre os cards */
+        justify-content: center; /* Centraliza os itens */
+    }
 
+    .team-picture .people-picture:last-child {
+        grid-column: 1 / -1; /* Faz o último card ocupar toda a linha */
+        justify-self: center; /* Centraliza o card na linha */
+    }
+}
 /* Responsividade para tablets */
 @media (max-width: 768px) {
 
@@ -190,11 +203,13 @@
     }
 
     .people2{
-        margin-top: 30rem;
+        margin-top: 2rem;
+        margin-bottom: 0;
     }
 
     .team-picture {
-        gap: 1rem;
+        display: flex;
+        flex-direction: column;
     }
 
     .people-picture {
@@ -215,12 +230,21 @@
     .team-picture {
         flex-direction: column;
         align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .people2{
+        margin-top: 0;
+        margin-bottom: 0;
     }
 
     .people-picture {
         max-width: 100%;
         margin: 0;
         margin-top: 3rem;
+        
     }
 
     .people-picture img{
@@ -240,6 +264,8 @@
     .picture-info{
         width: 18rem;
     }
+
+
 }
 
 @media (max-width: 768px) {
