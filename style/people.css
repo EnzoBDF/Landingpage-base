@@ -1,5 +1,5 @@
 .people{
-    height: 50vh;
+    height: auto;
     width: 100vw;
     display: flex;
     flex-direction: column;

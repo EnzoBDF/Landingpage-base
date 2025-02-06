@@ -13,11 +13,9 @@
     width: 30vw;
     text-align: left;
     margin-left: 5rem;
+    align-items: center;
 }
 
-.depoimento-text button{
-    margin-left: 11rem;
-}
 
 .depoimento-text h1{
     opacity: 0;
@@ -35,7 +33,7 @@
     height: 55vh;
 
 /*     filter: drop-shadow(-40px -40px 0px #20bf55); */
-    margin-left: 15rem;
+    margin-left: 10rem;
 }
 
 @media (max-width:1024px){
